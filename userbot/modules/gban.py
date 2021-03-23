@@ -58,9 +58,9 @@ async def gben(userbot):
     if not sender.id == me.id:
         dark = await dc.reply("`Kamu Harus Di Global Banned, Karena Kamu Jamet!`")
     else:
-        dark = await dc.edit("`✒ Global Banned Jamet Segera Di Proses`")
+        dark = await dc.edit("`➢ Global Banned Jamet Segera Di Proses`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`✒ Terdeteksi Jamet, Rasakan Dibanned Secara Global Karena Elu Jamet Kontol`")
+    await dark.edit(f"`➢ Terdeteksi Jamet, Rasakan Dibanned Secara Global Karena Elu Jamet Kontol`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -112,10 +112,9 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**╭✠╼━━━━━━❖━━━━━━━✠╮\n** `𝙂𝘽𝙖𝙣𝙣𝙚𝙙 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 ☬ 𝐁𝐎𝐓 𝐊𝐀𝐌𝐏𝐀𝐍𝐆 ☬`\n**➢ 𝐆𝐁𝐚𝐧𝐧𝐞𝐝 𝐁𝐲: ** `{ALIVE_NAME}`\n**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ Punishment: ** `𝗚𝗹𝗼𝗯𝗮𝗹 𝗕𝗮𝗻𝗻𝗲𝗱`\n**╰✠╼━━━━━━❖━━━━━━━✠╯"
+        f"**╭✠╼━━━━━━❖━━━━━━━✠╮\n** `𝙂𝘽𝙖𝙣𝙣𝙚𝙙 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🐨 𝐁𝐎𝐓 𝐊𝐀𝐌𝐏𝐀𝐍𝐆 🐨`\n**➢🐨 𝐆𝐁𝐚𝐧𝐧𝐞𝐝 𝐁𝐲: ** `{ALIVE_NAME}`\n**➢👥 Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ ☠️ Punishment: ** `𝗚𝗹𝗼𝗯𝗮𝗹 𝗕𝗮𝗻𝗻𝗲𝗱`\n╰✠╼━━━━━━❖━━━━━━━✠╯"
 
     )
-
 
 @ register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
@@ -177,7 +176,8 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**➢ Baginda:** `{ALIVE_NAME}`\n**➢ Username:** [{user.first_name}](tg://user?id={user.id})\n**➢ Pengampunan:** `Membatalkan Global Banned`"
+        f"**╭✠╼━━━━━━❖━━━━━━━✠╮\n** `𝗨𝗻𝗴𝗕𝗮𝗻𝗻𝗲𝗱 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🐨 𝐁𝐎𝐓 𝐊𝐀𝐌𝐏𝐀𝐍𝐆 🐨`\n**➢🐨 𝐔𝐧𝐠𝐁𝐚𝐧𝐧𝐞𝐝 𝐁𝐲: ** `{ALIVE_NAME}`\n**➢👥 Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ 😇 Pengampunan: ** `𝙐𝙣𝙜𝘽𝙖𝙣𝙣𝙚𝙙`\n╰✠╼━━━━━━❖━━━━━━━✠╯"
+
     )
 
 
