@@ -116,6 +116,7 @@ async def gben(userbot):
 
     )
 
+
 @ register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
