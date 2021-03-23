@@ -9,6 +9,7 @@ from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
 
 
+
 async def get_full_user(event):
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
@@ -52,6 +53,11 @@ async def get_user_from_id(user, event):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
+    if event.fwd_from:
+        return
+    reasonGban = event.text
+    reasonGban = reasonGban[6:]
+    no_reason = "No Reason Given "
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -101,7 +107,7 @@ async def gben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await dark.edit(f"`✒ Global Banned Menyala Anjeeng 🐨`")
+                await dark.edit(f"`➢ Global Banned Menyala Anjeeng 🐨`")
             except BaseException:
                 b += 1
     else:
@@ -112,7 +118,16 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**🐨 Baginda:** `{ALIVE_NAME}`\n**❂ Username:** [{user.first_name}](tg://user?id={user.id})\n**❂ Punishment:** `Global Banned`"
+        f"**➢ Baginda:** `{ALIVE_NAME}`\n
+        f"**➢ Username:** [{user.first_name}](tg://user?id={user.id})\n
+        f"**➢ Punishment:** `Global Banned`"
+        if len(gbunVar) > 0:
+                koalagbanm = "`{}`".format(reasonGban)
+                koalagbanr = "**Reason: **" + koalagbanm
+                jnl += koalagbanr
+            else:
+                jnl += no_reason
+            await reply_message.reply(jnl)
     )
 
 
@@ -122,9 +137,9 @@ async def gunben(userbot):
     sender = await dc.get_sender()
     me = await dc.client.get_me()
     if not sender.id == me.id:
-        dark = await dc.reply("`✒ Mengampuni Jamet Tolol Yang Meresahkan`")
+        dark = await dc.reply("`➢ Mengampuni Jamet Tolol Yang Meresahkan`")
     else:
-        dark = await dc.edit("`✒ Mencabut Hukuman Sedang Di Proses`")
+        dark = await dc.edit("`➢ Mencabut Hukuman Sedang Di Proses`")
     me = await userbot.client.get_me()
     await dark.edit(f"`Jamet Telah Di Ampuni, Lain Kali Gausah Sok Keras Ya KONTOLLL...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
@@ -165,7 +180,7 @@ async def gunben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await dark.edit(f"`✒ Pengampunan Untuk Jamet... Please Wait... `")
+                await dark.edit(f"`➢ Pengampunan Untuk Jamet... Please Wait... `")
             except BaseException:
                 b += 1
     else:
@@ -176,14 +191,14 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**🐨 Baginda:** `{ALIVE_NAME}`\n**❂ Username:** [{user.first_name}](tg://user?id={user.id})\n**❂ Pengampunan:** `Membatalkan Global Banned`"
+        f"**➢ Baginda:** `{ALIVE_NAME}`\n**➢ Username:** [{user.first_name}](tg://user?id={user.id})\n**➢ Pengampunan:** `Membatalkan Global Banned`"
     )
 
 
 CMD_HELP.update({
     "gban": "\
 `.gban`\
-\nUsage: ✒ Melakukan Global Banned Untuk Jamet Tele Yang Mereshahkan.\
+\nUsage: ➢ Melakukan Global Banned Untuk Jamet Tele Yang Mereshahkan.\
 \n\n`.ungban`\
-\nUsage: ✒ Mengampuni Jamet"
+\nUsage: ➢ Mengampuni Jamet"
 })
