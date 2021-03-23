@@ -52,10 +52,6 @@ async def get_user_from_id(user, event):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
-    if event.fwd_from:
-        return
-    reasonGban = event.text
-    reasonGban = reasonGban[6:]
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
