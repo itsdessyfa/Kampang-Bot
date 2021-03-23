@@ -56,7 +56,6 @@ async def gben(userbot):
         return
     reasonGban = event.text
     reasonGban = reasonGban[6:]
-    no_reason = "No Reason Given "
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -118,7 +117,7 @@ async def gben(userbot):
         pass
     return await dark.edit(
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮\n** `𝙂𝘽𝙖𝙣𝙣𝙚𝙙 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 ☬ 𝐁𝐎𝐓 𝐊𝐀𝐌𝐏𝐀𝐍𝐆 ☬`\n**➢ 𝐆𝐁𝐚𝐧𝐧𝐞𝐝 𝐁𝐲: ** `{ALIVE_NAME}`\n**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ Punishment: ** `𝗚𝗹𝗼𝗯𝗮𝗹 𝗕𝗮𝗻𝗻𝗲𝗱`\n**╰✠╼━━━━━━❖━━━━━━━✠╯"
-        
+
     )
 
 
