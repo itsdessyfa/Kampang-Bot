@@ -119,7 +119,7 @@ async def gben(userbot):
     return await dark.edit(
         f"**➢ Baginda: ** `{ALIVE_NAME}`\n
         f"**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n
-        f"**➢ Punishment:** `Global Banned`"
+        f"**➢ Punishment:** `Global Banned`"\n
         if len(gbunVar) > 0:
         koalagbanm="`{}`".format(reasonGban)
         koalagbanr="**Reason: **" + koalagbanm
