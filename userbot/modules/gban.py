@@ -117,14 +117,8 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**➢ Baginda: ** `{ALIVE_NAME}`\n**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ Punishment: ** `Global Banned`"
-        if len(reasonGban) > 0:
-        koalagbanm="`{}`".format(reasonGban)
-        koalagbanr="**Reason: **" + koalagbanm
-        jnl += koalagbanr
-        else:
-        jnl += no_reason
-        await reply_message.reply(jnl)
+        f"**╭✠╼━━━━━━❖━━━━━━━✠╮\n** `𝙂𝘽𝙖𝙣𝙣𝙚𝙙 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 ☬ 𝐁𝐎𝐓 𝐊𝐀𝐌𝐏𝐀𝐍𝐆 ☬`\n**➢ 𝐆𝐁𝐚𝐧𝐧𝐞𝐝 𝐁𝐲: ** `{ALIVE_NAME}`\n**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ Punishment: ** `𝗚𝗹𝗼𝗯𝗮𝗹 𝗕𝗮𝗻𝗻𝗲𝗱`\n**╰✠╼━━━━━━❖━━━━━━━✠╯"
+        
     )
 
 
