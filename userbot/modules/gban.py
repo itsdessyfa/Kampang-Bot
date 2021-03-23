@@ -9,7 +9,6 @@ from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
 
 
-
 async def get_full_user(event):
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
@@ -118,13 +117,13 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**➢ Baginda:** `{ALIVE_NAME}`\n
-        f"**➢ Username:** [{user.first_name}](tg://user?id={user.id})\n
+        f"**➢ Baginda: ** `{ALIVE_NAME}`\n
+        f"**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n
         f"**➢ Punishment:** `Global Banned`"
         if len(gbunVar) > 0:
-                koalagbanm = "`{}`".format(reasonGban)
-                koalagbanr = "**Reason: **" + koalagbanm
-                jnl += koalagbanr
+        koalagbanm="`{}`".format(reasonGban)
+        koalagbanr="**Reason: **" + koalagbanm
+        jnl += koalagbanr
             else:
                 jnl += no_reason
             await reply_message.reply(jnl)
