@@ -118,43 +118,43 @@ async def gben(userbot):
         pass
     return await dark.edit(
         f"**➢ Baginda: ** `{ALIVE_NAME}`\n**➢ Username: ** [{user.first_name}](tg: // user?id={user.id})\n**➢ Punishment: ** `Global Banned`"
-     if len(reasonGban) > 0:
-        koalagbanm = "`{}`".format(reasonGban)
-        koalagbanr = "**Reason: **" + koalagbanm
+        if len(reasonGban) > 0:
+        koalagbanm="`{}`".format(reasonGban)
+        koalagbanr="**Reason: **" + koalagbanm
         jnl += koalagbanr
-            else:
-                jnl += no_reason
-            await reply_message.reply(jnl)
+        else:
+        jnl += no_reason
+        await reply_message.reply(jnl)
     )
 
 
-@ register(outgoing = True, pattern = "^.ungban(?: |$)(.*)")
+@ register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
-    dc=userbot
-    sender=await dc.get_sender()
-    me=await dc.client.get_me()
+    dc = userbot
+    sender = await dc.get_sender()
+    me = await dc.client.get_me()
     if not sender.id == me.id:
-        dark=await dc.reply("`➢ Mengampuni Jamet Tolol Yang Meresahkan`")
+        dark = await dc.reply("`➢ Mengampuni Jamet Tolol Yang Meresahkan`")
     else:
-        dark=await dc.edit("`➢ Mencabut Hukuman Sedang Di Proses`")
-    me=await userbot.client.get_me()
+        dark = await dc.edit("`➢ Mencabut Hukuman Sedang Di Proses`")
+    me = await userbot.client.get_me()
     await dark.edit(f"`Jamet Telah Di Ampuni, Lain Kali Gausah Sok Keras Ya KONTOLLL...`")
-    my_mention="[{}](tg://user?id={})".format(me.first_name, me.id)
+    my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
-    a=b=0
+    a = b = 0
     if userbot.is_private:
-        user=userbot.chat
-        reason=userbot.pattern_match.group(1)
+        user = userbot.chat
+        reason = userbot.pattern_match.group(1)
     else:
         userbot.chat.title
     try:
-        user, reason=await get_full_user(userbot)
+        user, reason = await get_full_user(userbot)
     except BaseException:
         pass
     try:
         if not reason:
-            reason="Private"
+            reason = "Private"
     except BaseException:
         return await dark.edit("`Syntax Ellol Anjeng 🚫`")
     if user:
@@ -168,7 +168,7 @@ async def gunben(userbot):
             await userbot.client(UnblockRequest(user))
         except BaseException:
             pass
-        testuserbot=[
+        testuserbot = [
             d.entity.id
             for d in await userbot.client.get_dialogs()
             if (d.is_group or d.is_channel)
