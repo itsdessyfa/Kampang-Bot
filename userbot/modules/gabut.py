@@ -84,17 +84,17 @@ async def typewriter(typew):
     await typew.edit(f"**нαι αρα кαвαя ㋛**")
     sleep(3)
     await typew.edit("`السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
-# Owner @mixiologist
+# Owner @manusiarakitann
 
 
-@register(outgoing=True, pattern='^P(?: |$)(.*)')
+@register(outgoing=True, pattern='^wss(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit(f"**Hallo KIMAAKK SAYA {DEFAULTUSER}**")
-    sleep(2)
-    await typew.edit("`KONTOLLL.....`")
-# Owner @Si_Dian
+    await typew.edit(f"**`Jawab Salam Dulu Gaes`**")
+    sleep(3)
+    await typew.edit("`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
+# Owner @manusiarakitann
 
 
 @register(outgoing=True, pattern='^.usange(?: |$)(.*)')
