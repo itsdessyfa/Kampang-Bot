@@ -63,7 +63,7 @@ async def help(event):
                          f"**\n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
                          f"**\n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮
                          f"**\n│   Untuk melihat lengkap Command**"
-                         f"* \n│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
+                         f"**\n│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
                          f"**\n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯")
         string = ""
         for i in CMD_HELP:
