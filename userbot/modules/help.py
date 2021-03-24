@@ -4,42 +4,12 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot help command """
-from datetime import datetime
-import time
-from time import sleep
-from platform import uname
+
 import asyncio
-from userbot import CMD_HELP, BOT_VER, ALIVE_NAME
+from userbot import CMD_HELP
 from userbot.events import register
 
 modules = CMD_HELP
-
-
-async def get_readable_time(seconds: int) -> str:
-    count = 0
-    up_time = ""
-    time_list = []
-    time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
-
-    while count < 4:
-        count += 1
-        remainder, result = divmod(
-            seconds, 60) if count < 3 else divmod(
-            seconds, 24)
-        if seconds == 0 and remainder == 0:
-            break
-        time_list.append(int(result))
-        seconds = int(remainder)
-
-    for x in range(len(time_list)):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
-    if len(time_list) == 4:
-        up_time += time_list.pop() + ", "
-
-    time_list.reverse()
-    up_time += ":".join(time_list)
-
-    return up_time
 
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
@@ -54,23 +24,20 @@ async def help(event):
             await asyncio.sleep(18)
             await event.delete()
     else:
-        await get_readable_time((time.time() - StartTime))
-        await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\"
-                         f"\n│ My Master: {ALIVE_NAME}\n"
-                         f"\n│ BOT VERSI: {BOT_VER}\n"
-                         f"\n│ PING BOT.: `% sms` \n"
-                         f"**│ Bantuan Modul[🐨BOT KAMPANG🐨]**"
-                         f"**╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
-                         f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**"
-                         f"**│   Untuk melihat lengkap Command**"
-                         f"**│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
-                         f"**╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**")
+        await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
+            \n│   Help for [🐨BOT KAMPANG🐨]\
+            \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯ \
+            \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮\
+            \n│   Untuk melihat lengkap Command\
+            \n│   Contoh: .help <nama module>\
+            \n│   Modules Aktif: {len(modules)}\
+           \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t〙◈〘 "
         await event.reply(f"•{string}•"
-                          "\nKONTOLLLL....")
+                          "\nʕ≧ᴥ≦ʔʕ≧ᴥ≦ʔʕ≧ᴥ≦ʔ")
         await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Module**")
         await asyncio.sleep(1000)
         await event.delete()
