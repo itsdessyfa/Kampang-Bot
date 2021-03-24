@@ -56,11 +56,11 @@ async def help(event):
     else:
         await get_readable_time((time.time() - StartTime))
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\"
-                         f"**\n│ My Master: {ALIVE_NAME}\n**"
-                         f"**\n│ BOT VERSI: {BOT_VER}\n**"
-                         f"**\n│ PING BOT.: `% sms` \n**"
-                         f"**  │ Bantuan Modul[🐨BOT KAMPANG🐨]**"
-                         f"**  ╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
+                         f"\n│ My Master: {ALIVE_NAME}\n"
+                         f"\n│ BOT VERSI: {BOT_VER}\n"
+                         f"\n│ PING BOT.: `% sms` \n"
+                         f"**│ Bantuan Modul[🐨BOT KAMPANG🐨]**"
+                         f"**╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
                          f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**"
                          f"**│   Untuk melihat lengkap Command**"
                          f"**│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
