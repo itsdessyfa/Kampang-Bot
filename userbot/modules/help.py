@@ -14,6 +14,7 @@ from userbot.events import register
 
 modules = CMD_HELP
 
+
 async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
@@ -40,6 +41,7 @@ async def get_readable_time(seconds: int) -> str:
 
     return up_time
 
+
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(event):
     """ For .help command,"""
@@ -54,17 +56,16 @@ async def help(event):
     else:
         await get_readable_time((time.time() - StartTime))
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
-                \n│ My Master : {ALIVE_NAME}
-                \n│ BOT VERSI : {BOT_VER}
-await pong.edit(\n│ PING BOT. : `%sms` \n (duration)
-                \n│ Bantuan Modul [🐨BOT KAMPANG🐨]\
-                \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯ \
-            \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮\
-            \n│   Untuk melihat lengkap Command\
-            \n│   Contoh: .help <nama module>\
-            \n│   Modules Aktif: {len(modules)}\
+                \n│ My Master: {ALIVE_NAME}
+                \n│ BOT VERSI: {BOT_VER}
+await pong.edit(\n│ PING BOT.: `% sms` \n(duration)
+                \n│ Bantuan Modul[🐨BOT KAMPANG🐨]
+                \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯
+            \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮
+            \n│   Untuk melihat lengkap Command
+            \n│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}
            \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯")
-        string = ""
+        string=""
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t〙◈〘 "
