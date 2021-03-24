@@ -56,7 +56,7 @@ async def help(event):
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
                 \n│ My Master : {ALIVE_NAME}
                 \n│ BOT VERSI : {BOT_VER}
-await pong.edit(\n│ PING BOT. : `%sms` \n (duration))
+await pong.edit(\n│ PING BOT. : `%sms` \n (duration)
                 \n│ Bantuan Modul [🐨BOT KAMPANG🐨]\
                 \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯ \
             \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮\
