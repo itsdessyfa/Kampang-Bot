@@ -56,15 +56,15 @@ async def help(event):
     else:
         await get_readable_time((time.time() - StartTime))
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\"
-                         f"**\n│ My Master: {ALIVE_NAME}**"
-                         f"**\n│ BOT VERSI: {BOT_VER}**"
+                         f"**\n│ My Master: {ALIVE_NAME}\n**"
+                         f"**\n│ BOT VERSI: {BOT_VER}\n**"
                          f"**\n│ PING BOT.: `% sms` \n**"
-                         f"**\n│ Bantuan Modul[🐨BOT KAMPANG🐨]**"
-                         f"**\n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
-                         f"**\n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**"
-                         f"**\n│   Untuk melihat lengkap Command**"
-                         f"**\n│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
-                         f"**\n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**")
+                         f"**  │ Bantuan Modul[🐨BOT KAMPANG🐨]**"
+                         f"**  ╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**"
+                         f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**"
+                         f"**│   Untuk melihat lengkap Command**"
+                         f"**│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}**"
+                         f"**╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯**")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
