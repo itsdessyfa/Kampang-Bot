@@ -25,7 +25,7 @@ async def help(event):
             await event.delete()
     else:
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
-            \n│   Help for [🐨BOT KAMPANG🐨]\
+            \n│   Bantuan Modul [🐨BOT KAMPANG🐨]\
             \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯ \
             \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮\
             \n│   Untuk melihat lengkap Command\
@@ -35,7 +35,7 @@ async def help(event):
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t🔹 "
+            string += "`\t]•[ "
         await event.reply(f"•{string}•"
                           "\nKONTOLLLL....")
         await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Module**")
