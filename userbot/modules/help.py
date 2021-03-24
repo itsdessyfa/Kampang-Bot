@@ -6,7 +6,7 @@
 """ Userbot help command """
 
 import asyncio
-from userbot import CMD_HELP
+from userbot import CMD_HELP, BOT_VER
 from userbot.events import register
 
 modules = CMD_HELP
@@ -25,7 +25,8 @@ async def help(event):
             await event.delete()
     else:
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
-            \n│   Bantuan Modul [🐨BOT KAMPANG🐨]\
+            \n│ BOT VERSI : {BOT_VER}
+            \n│ Bantuan Modul [🐨BOT KAMPANG🐨]\
             \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯ \
             \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮\
             \n│   Untuk melihat lengkap Command\
