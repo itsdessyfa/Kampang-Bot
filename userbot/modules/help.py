@@ -58,9 +58,9 @@ async def help(event):
         await event.edit(f"**╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮**\
                 \n│ My Master: {ALIVE_NAME}
                 \n│ BOT VERSI: {BOT_VER}
-                \n│ PING BOT.: `% sms` \n
-                \n│ Bantuan Modul[🐨BOT KAMPANG🐨]
-                \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯
+                         \n│ PING BOT.: `% sms` \n
+                         \n│ Bantuan Modul[🐨BOT KAMPANG🐨]
+                         \n╰►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╯
                          \n╭►▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅◄◅╮
                          \n│   Untuk melihat lengkap Command
                          \n│   Contoh: .help < nama module > n│   Modules Aktif: {len(modules)}
